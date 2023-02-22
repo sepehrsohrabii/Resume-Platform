@@ -1,0 +1,41 @@
+{
+  "name": "resume-platform",
+  "version": "1.0.0",
+  "description": "This is a Resume Platform with Express JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sepehrsohrabii/Resume-Platform.git"
+  },
+  "keywords": [
+    "Express",
+    "Node",
+    "JS",
+    "Resume"
+  ],
+  "author": "Sepehr Sohrabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sepehrsohrabii/Resume-Platform/issues"
+  },
+  "homepage": "https://github.com/sepehrsohrabii/Resume-Platform#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "sequelize": "^6.28.1",
+    "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^2.0.20",
+    "prettier": "2.8.4"
+  }
+}
