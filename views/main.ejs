@@ -1,0 +1,10 @@
+<%- include('header'); -%>
+<div class="container">
+  <img
+    src="data:image/jpeg;base64,<%= ProfilePic.toString('base64') %>"
+    alt=""
+  />
+</div>
+<h1><%= FirstName %> <%= LastName %></h1>
+<p>My page</p>
+<%- include('footer'); -%>
