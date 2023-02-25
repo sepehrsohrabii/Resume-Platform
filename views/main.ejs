@@ -1,10 +1,122 @@
 <%- include('header'); -%>
 <div class="container">
-  <img
-    src="data:image/jpeg;base64,<%= ProfilePic.toString('base64') %>"
-    alt=""
-  />
+  <div class="row">
+    <div class="col-12 col-md-4 ps-0 pe-3">
+      <img
+        src="data:image/jpeg;base64,<%= ProfilePic.toString('base64') %>"
+        alt=""
+        width="100%"
+        class="rounded-4"
+      />
+    </div>
+    <div
+      class="col-12 col-md-8 bg-color-two rounded-4 p-5 d-flex align-items-center"
+    >
+      <div>
+        <h1>I'm <%= FirstName %> <%= LastName %></h1>
+        <h5 class="mt-1">
+          <div class="typing-demo"><%= JobTitle %></div>
+        </h5>
+        <p class="mt-4" align="justify">
+          Highly experienced software engineer with a strong passion for
+          developing and deploying high-quality web applications. Proficient in
+          HTML, CSS, JS, Django, React Native, NodeJS, and Python. Skilled in
+          Linux server configuration and web scraping with Python. Committed to
+          teamwork and keeping Git repositories updated.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3 gap-3">
+    <div class="col-5 align-self-center">
+      <h3>If you want to know more about me.</h3>
+    </div>
+    <div
+      class="col d-flex align-items-center bg-color-three rounded-4 justify-content-center"
+    >
+      <a class="h2 fw-semibold" href="<%= ResumeLink %>" target="_blank"
+        >My Resume</a
+      >
+    </div>
+    <div
+      class="col-4 bg-color-four rounded-4 d-flex justify-content-between p-4"
+    >
+      <a class="align-self-center" href="tel:+989369678828">
+        <i class="bi bi-phone text-color-one fs-3"></i>
+      </a>
+      <a class="align-self-center" href="mailto:sepehr0sohrabi@gmail.com">
+        <i class="bi bi-envelope-at text-color-one fs-3"></i>
+      </a>
+      <a
+        class="align-self-center"
+        href="https://www.linkedin.com/in/sepehrsohrabi/"
+      >
+        <i class="bi bi-linkedin text-color-one fs-3"></i>
+      </a>
+      <a class="align-self-center" href="https://github.com/sepehrsohrabii">
+        <i class="bi bi-github text-color-one fs-3"></i>
+      </a>
+      <a class="align-self-center" href="https://wa.me/0989369678828">
+        <i class="bi bi-whatsapp text-color-one fs-3"></i>
+      </a>
+    </div>
+  </div>
+  <div class="row mt-3 gap-3">
+    <div class="col bg-color-two rounded-4 p-3 text-center">
+      <p>
+        Proficient in Python, Django, React Native, NodeJS, HTML, CSS, and JS
+      </p>
+    </div>
+    <div class="col bg-color-two rounded-4 p-3 text-center">
+      <p>Experienced in Linux server configuration and deployment</p>
+    </div>
+    <div class="col bg-color-two rounded-4 p-3 text-center">
+      <p>Proficient in web scraping with Python</p>
+    </div>
+    <div class="col bg-color-two rounded-4 p-3 text-center">
+      <p>Strong teamwork and communication skills</p>
+    </div>
+  </div>
+  <div class="row align-items-center mt-5 mb-131">
+    <div class="col-2">
+      <h2 class="fw-bold mb-1">Blog Posts</h2>
+    </div>
+    <div class="col border-2 border-bottom border-dark"></div>
+  </div>
+  <div class="row mt-4">
+    <div
+      class="carousel"
+      data-flickity='{ 
+      "freeScroll": true, 
+      "draggable": true, 
+      "contain": true,
+      "prevNextButtons": false,
+      "pageDots": false }'
+    >
+      <% Posts.forEach(function(post) { %>
+      <div
+        class="carousel-cell rounded-4 p-4 border-color-three border-2 border"
+      >
+        <div class="mtn-45 overflow-hidden position-relative">
+          <img
+            src="data:image/jpeg;base64,<%= post.image.toString('base64') %>"
+            alt=""
+            width="100%"
+            class="rounded-4 mb-3 blog-pic"
+          />
+        </div>
+        <h5 class="fw-bold mb-2"><%= post.title.substr(0, 50) %>...</h5>
+        <p class="lh-sm text-secondary" align="justify">
+          <%= post.description.substr(0, 150) %> ...
+        </p>
+        <div class="w-100 text-end text-gray mt-4">
+          <a class="bg-color-three rounded-3 p-2" href="/post/<%= post.id %>"
+            >Read More</a
+          >
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
 </div>
-<h1><%= FirstName %> <%= LastName %></h1>
-<p>My page</p>
 <%- include('footer'); -%>

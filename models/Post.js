@@ -1,34 +1,30 @@
 const { DataTypes } = require('sequelize');
 const db = require('../configs/db');
 
-const MainInfo = db.define(
-  'main_informations',
+const Post = db.define(
+  'posts',
   {
     // Model attributes are defined here
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true,
+      autoIncrement: true,
     },
-    firstName: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    lastName: {
-      type: DataTypes.STRING,
-      // allowNull defaults to true
-    },
-    jobTitle: {
-      type: DataTypes.STRING,
+    description: {
+      type: DataTypes.TEXT,
       // allowNull defaults to true
     },
     image: {
       type: DataTypes.BLOB,
       // allowNull defaults to true
     },
-    resumeLink: {
-      type: DataTypes.STRING,
-      // allowNull defaults to true
+    created_at: {
+      type: DataTypes.DATE,
     },
   },
   {
@@ -37,6 +33,6 @@ const MainInfo = db.define(
 );
 
 // `db.define` also returns the model
-console.log(MainInfo === db.models.main_informations); // true
+console.log(Post === db.models.posts); // true
 
-module.exports = MainInfo;
+module.exports = Post;

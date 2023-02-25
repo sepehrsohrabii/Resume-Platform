@@ -11,6 +11,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden !important;
   background-color: #fefbe9;
+  color: #353744;
   transition: all 0.5s ease !important;
   --color-one: #fefbe9;
   --color-two: #e1eedd;
@@ -28,6 +29,7 @@ h3,
 h4,
 h5,
 h6,
+.h2,
 p {
   margin-bottom: 0px;
 }
@@ -75,4 +77,67 @@ a {
 
 .ls-3 {
   letter-spacing: 3px !important;
+}
+.mb-131 {
+  margin-bottom: 131px;
+}
+.mtn-45 {
+  margin-top: -45%;
+}
+.text-color-one {
+  color: var(--color-one);
+}
+.bg-color-two {
+  background-color: var(--color-two);
+}
+.bg-color-three {
+  background-color: var(--color-three);
+}
+.bg-color-four {
+  background-color: var(--color-four);
+}
+.border-color-three {
+  border-color: var(--color-four) !important;
+}
+/* Typing Effect */
+.typing-demo {
+  width: 15ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  /* font-family: monospace; */
+  /* font-size: 2em; */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+/* Carousel */
+.carousel-cell {
+  width: 350px;
+  margin-right: 10px;
+  background: white;
+  height: 340px;
+}
+.flickity-viewport {
+  position: initial !important;
+}
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+}
+.blog-pic {
+  height: 198px;
+  object-fit: cover;
+  object-position: center;
 }
