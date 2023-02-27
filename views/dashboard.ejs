@@ -1,0 +1,32 @@
+<%- include('header'); -%>
+<div class="container">
+  <div class="row p-5 bg-color-two rounded-4 mb-4">
+    <div class="col text-center h2">DASHBOARD</div>
+  </div>
+  <div class="row p-5 bg-color-two rounded-4 mb-4">
+    <div class="container">
+      <div class="row border-bottom border-2 pb-4">
+        <div class="col text-start">
+          <h4 class="fw-bold">Posts</h4>
+        </div>
+        <div class="col text-end">
+          <a
+            class="bg-color-three px-3 py-2 h5 fw-semibold rounded-3"
+            href="/dashboard/create"
+            >Create New</a
+          >
+        </div>
+      </div>
+      <% posts.forEach(function(post) { %>
+      <div class="row my-3">
+        <div class="col text-start"><%= post.title.substr(0, 50) %></div>
+        <div class="col-2 text-center"><%= post.created_at %></div>
+        <div class="col-2 text-end">
+          <a href="/post/<%= post.id %>">view</a>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+  </div>
+</div>
+<%- include('footer'); -%>

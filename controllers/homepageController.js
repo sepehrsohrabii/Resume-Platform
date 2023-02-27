@@ -2,6 +2,7 @@ const MainInfo = require('../models/MainInfo');
 const Post = require('../models/Post');
 
 const homepageController = async (req, res) => {
+  console.log('req.user', req.user);
   try {
     const mainInfo = await MainInfo.findAll();
     const posts = await Post.findAll();
@@ -22,6 +23,8 @@ const homepageController = async (req, res) => {
         ProfilePic: mainInfo[0].image,
         ResumeLink: mainInfo[0].resumeLink,
         Posts: posts,
+        user: req.user,
+        path: req.route.path,
       });
     }
   } catch (error) {

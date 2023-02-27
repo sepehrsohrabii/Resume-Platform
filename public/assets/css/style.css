@@ -17,6 +17,7 @@ body {
   --color-two: #e1eedd;
   --color-three: #f0a04b;
   --color-four: #183a1d;
+  --color-texts: #353744;
 }
 @media (max-width: 768px) {
 }
@@ -29,43 +30,14 @@ h3,
 h4,
 h5,
 h6,
+.h1,
 .h2,
+.h3,
+.h4,
+.h5,
+.h6,
 p {
   margin-bottom: 0px;
-}
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #828282;
-  font-size: 12px;
-  font-weight: 300;
-  opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #828282;
-  font-size: 12px;
-  font-weight: 300;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #828282;
-  font-size: 12px;
-  font-weight: 300;
-}
-label {
-  font-family: 'Poppins';
-  font-size: 16px;
-  font-weight: 300;
-}
-input[type='text'],
-input[type='email'],
-input[type='number'],
-input[type='tel'],
-input[type='url'] {
-  border: 0px;
-  font-family: 'Poppins';
 }
 
 a {
@@ -74,7 +46,16 @@ a {
   transition-duration: 0.1s !important;
   color: unset !important;
 }
-
+.button-1 {
+  background-color: var(--color-four);
+  border-width: 2px;
+  border-color: var(--color-four);
+  color: var(--color-one);
+}
+.button-1:hover {
+  background-color: transparent;
+  color: var(--color-texts);
+}
 .ls-3 {
   letter-spacing: 3px !important;
 }
@@ -140,4 +121,50 @@ a {
   height: 198px;
   object-fit: cover;
   object-position: center;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type='email'] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type='password'] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signup {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signup .form-floating:focus-within {
+  z-index: 2;
+}
+.form-signup input[type='username'] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signup input[type='email'] {
+  margin-bottom: -1px;
+  border-radius: 0;
+}
+
+.form-signup input[type='password'] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

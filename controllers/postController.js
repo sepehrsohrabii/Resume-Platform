@@ -11,6 +11,8 @@ const postController = async (req, res) => {
     Desc: post.description,
     Image: post.image,
     Created_at: post.created_at,
+    user: req.user,
+    path: req.route.path,
   });
 };
 
